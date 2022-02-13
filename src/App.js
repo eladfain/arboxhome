@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+
 import './App.css';
+import ElevatorGrid from './components/ElevatorsGrid';
+import styled from 'styled-components';
+
+const Wrapper=styled.div`
+margin:auto;
+width:30%;
+text-align: center;
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <h1>Elevator Exercise</h1>
+        <ElevatorGrid/>
+    </Wrapper>
   );
 }
 
