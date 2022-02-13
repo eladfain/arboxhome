@@ -16,7 +16,7 @@ const elevatorAnimation=(position)=>keyframes`
 const ElevatorWrapper=styled.span`
 position:relative;
 animation-name ${props=>props.position!==0?elevatorAnimation(props.position*100):null};
- animation-duration: ${props=>`${props.position}s`};`
+ animation-duration: ${props=>`${Math.abs(props.position)}s`};`
 const callElevatorButtonInitialState=()=>{
     const buttons=[];
     for(let i=0;i<FLOORS;i++){
